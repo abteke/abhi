@@ -13,6 +13,6 @@ with:
 aws-access-key-id : ${{ secrets.AWS_ACCESS_KEY_ID }}
 aws-secret-access-key : ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 aws-region : ap-south-1
-- name: Copy the SQL files to S3 SQL
-run: aws lambda update-function-configuration --function-name git_testing \
-    --environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
+
+run: |
+aws lambda update-function-configuration --function-name git_testing \--environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
