@@ -12,7 +12,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install awscli
-      - run: aws lambda update-function-configuration --function-name git_testing \--environment "Variables={BUCKET=my-bucket,KEY=file.csv}"
+      - run: aws lambda update-function-configuration --function-name git_testing \--environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
