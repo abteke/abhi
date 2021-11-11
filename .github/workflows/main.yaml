@@ -16,4 +16,4 @@ steps:
 
 - name: Copy the SQL files to S3 SQL
   run: |
-	aws lambda update-function-configuration --function-name git_testing \--environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
+aws lambda update-function-configuration --function-name git_testing \--environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
