@@ -12,7 +12,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install awscli
-      - run: aws lambda invoke --function-name "GitWorkflow" --payload '{"name":"Roy Singh", "addr":"Mumbai"}' response.json
+      - run: aws lambda invoke --invocation-type RequestResponse --function-name GitWorkflow --payload '{"name":"Roy Singh", "addr":"Mumbai"}'
 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
